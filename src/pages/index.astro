@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SpaghettiFact from '../components/SpaghettiFact.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spaghetti Site</title>
+        <link rel="stylesheet" href="/src/styles/global.css">
+    </head>
+    <body>
+        <main>
+            <h1>Spaghetti Website!!</h1>
+            <p>All about spaghetti.</p>
+            
+            <SpaghettiFact fact="Spaghetti is traditionally served with tomato sauce." />
+            <SpaghettiFact fact="The word 'spaghetti' means 'little strings' in Italian." />
+            <SpaghettiFact fact="I like spaghetti." />
+            
+            <figure>
+                <img src="/images/spaghetti.jpg" alt="Delicious spaghetti" class="spaghetti-img">
+                <figcaption>Spaghetti.</figcaption>
+            </figure>
+
+            <p><a href="/recipe">Check out my spaghetti recipe!</a></p>
+        </main>
+    </body>
+</html>
